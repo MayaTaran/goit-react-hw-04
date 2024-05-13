@@ -1,17 +1,12 @@
-import css from "./ImageGallery.module.css";
+import React from 'react';
 
-export const ImageGallery = ({ }) => {
-  
+export const ImageGallery = ({ images }) => {
   return (
- <ul>
-	{/* Набір елементів списку із зображеннями */}
-	<li>
-		<div>
-		  <img src="" alt="" />
-		</div>
-	</li>
-</ul>
-
-
+    <div>
+      {images.map(image => (
+        <img key={image.id} src={image.url} alt={image.alt} />
+      ))}
+    </div>
   );
 };
+
