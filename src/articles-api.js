@@ -9,10 +9,13 @@ export const FetchImages = async (searchQuery) => {
                 query: searchQuery,
                 client_id: 'a1H_AtFOEkWvv8Iub7bmeGi3QR7fGIu7W9aQWNXaVBU'
             }
+        
         });
-              return response.data.hits;
+        console.log(response.data.results);
+              return response.data.results;
     } catch (error) {
-             console.error("Error fetching images:", error);
+        console.error("Error fetching images:", error);
+        
         return [];
     }
 };
